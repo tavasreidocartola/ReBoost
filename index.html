@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ReBoost - Energy Powder</title>
 
     <style>
@@ -17,6 +17,7 @@
             background-color: #000;
             color: #fff;
             font-family: 'Segoe UI', sans-serif;
+            padding-top: 80px; /* para não ficar atrás do header fixo */
         }
 
         header {
@@ -91,11 +92,12 @@
             color: #000;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .hero button:hover {
             background-color: #0099cc;
+            transform: scale(1.05);
         }
 
         /* Seções */
@@ -120,6 +122,16 @@
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        /* Imagem nova entre título e produto */
+        #produto > img {
+            display: block;
+            margin: 20px auto 40px auto;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #00bfff88;
         }
 
         /* Produto */
@@ -231,8 +243,12 @@
     <!-- Produto -->
     <section id="produto">
         <h2>Nosso Produto</h2>
+
+        <!-- Imagem nova inserida aqui -->
+        <img src="https://i.imgur.com/e4Pv9mF.png" alt="Imagem promocional do produto ReBoost">
+
         <div class="produto-container">
-            <img src="https://i.imgur.com/2AZ9P5n.png" alt="Produto ReBoost">
+            <img src="https://i.imgur.com/2AZ9P5n.png" alt="Produto ReBoost" />
             <p><strong>ReBoost Energy Powder</strong> — Sabor Neutro | 30 doses</p>
 
             <div class="beneficios">
