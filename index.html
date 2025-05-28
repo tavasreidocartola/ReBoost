@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReBoost - Energy Powder</title>
 
-    <!-- SEO -->
-    <meta name="description" content="ReBoost Energy Powder - Energia, foco e performance máxima. Supere seus limites com o melhor Energy Powder do mercado.">
-    <meta property="og:title" content="ReBoost - Energy Powder">
-    <meta property="og:description" content="Supere seus limites com o melhor Energy Powder do mercado.">
-    <meta property="og:image" content="https://i.imgur.com/2AZ9P5n.png">
-    <meta property="og:type" content="website">
-
     <style>
         * {
             margin: 0;
@@ -108,7 +101,10 @@
         /* Seções */
         section {
             padding: 100px 10%;
-            scroll-margin-top: 100px;
+        }
+
+        #sobre, #produto, #contato {
+            background-color: #000;
         }
 
         section h2 {
@@ -154,12 +150,6 @@
             width: 220px;
             text-align: center;
             border: 1px solid #00BFFF;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .beneficio:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #00BFFF;
         }
 
         .beneficio h3 {
@@ -196,7 +186,6 @@
             border-top: 1px solid #111;
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 40px;
@@ -204,24 +193,6 @@
 
             nav ul {
                 gap: 15px;
-            }
-
-            .produto-container img {
-                width: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .produto-container img {
-                width: 200px;
-            }
-
-            .beneficio {
-                width: 100%;
             }
         }
     </style>
@@ -254,14 +225,14 @@
     <!-- Sobre -->
     <section id="sobre">
         <h2>Sobre a ReBoost</h2>
-        <p>A ReBoost nasceu com um propósito claro: entregar energia, foco e performance para quem busca superar seus limites. Nossa fórmula foi desenvolvida com ingredientes de alta qualidade, pensado para atletas, gamers e profissionais de alta performance.</p>
+        <p>A ReBoost nasceu com um objetivo simples e direto: impedir que alunos tomem ocorrência por dormir na aula. Chega de pescoço tombando, caderno virando travesseiro e aquele olhar perdido pro professor. Nossa fórmula foi criada pra te manter acordado, focado e cheio de energia — seja pra encarar uma aula chata, estudar até tarde ou simplesmente não ser pego no flagra pescando. Com ingredientes de alta qualidade, a ReBoost é a sua melhor aliada contra o sono e o tédio. Mais energia, mais foco... e zero ocorrências na ficha.</p>
     </section>
 
     <!-- Produto -->
     <section id="produto">
         <h2>Nosso Produto</h2>
         <div class="produto-container">
-            <img src="https://i.imgur.com/2AZ9P5n.png" alt="Pote do suplemento ReBoost Energy Powder">
+            <img src="https://i.imgur.com/2AZ9P5n.png" alt="Produto ReBoost">
             <p><strong>ReBoost Energy Powder</strong> — Sabor Neutro | 30 doses</p>
 
             <div class="beneficios">
@@ -289,9 +260,9 @@
     <section id="contato">
         <h2>Fale Conosco</h2>
         <div class="contato">
-            <a href="https://wa.me/5511999999999" target="_blank">WhatsApp</a>
-            <a href="https://instagram.com/seuusuario" target="_blank">Instagram</a>
-            <a href="mailto:contato@reboost.com">Email</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
         </div>
     </section>
 
