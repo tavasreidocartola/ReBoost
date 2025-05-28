@@ -3,63 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReBoost Energy</title>
+    <title>ReBoost - Energy Powder</title>
+
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #000;
             color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         header {
-            background-color: #0f0f0f;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #00f7ff;
-        }
-
-        header h1 {
-            color: #00f7ff;
-            margin: 0;
-        }
-
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        h2 {
-            color: #00f7ff;
-        }
-
-        .produto {
-            background-color: #111;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 600px;
-            border: 1px solid #00f7ff;
-        }
-
-        .produto img {
+            background-color: #000;
+            padding: 20px 40px;
+            border-bottom: 1px solid #111;
+            position: fixed;
             width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            margin-top: 20px;
+            top: 0;
+            z-index: 1000;
         }
 
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #00BFFF;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00BFFF;
+        }
+
+        /* Hero */
+        .hero {
+            background: url('https://i.imgur.com/2AZ9P5n.png') no-repeat center/contain;
+            background-color: #000;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            color: #00BFFF;
+            text-shadow: 0 0 20px #00BFFF;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ccc;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: #00BFFF;
+            border: none;
+            border-radius: 30px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #0099cc;
+        }
+
+        /* Seções */
+        section {
+            padding: 100px 10%;
+        }
+
+        #sobre, #produto, #contato {
+            background-color: #000;
+        }
+
+        section h2 {
+            color: #00BFFF;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p {
+            color: #ccc;
+            font-size: 18px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Produto */
+        .produto-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .produto-container img {
+            width: 300px;
+        }
+
+        .beneficios {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .beneficio {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 15px;
+            width: 220px;
+            text-align: center;
+            border: 1px solid #00BFFF;
+        }
+
+        .beneficio h3 {
+            color: #00BFFF;
+            margin-bottom: 10px;
+        }
+
+        /* Contato */
+        .contato {
+            text-align: center;
+        }
+
+        .contato a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #00BFFF;
+            color: #000;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contato a:hover {
+            background-color: #0099cc;
+        }
+
+        /* Rodapé */
         footer {
-            background-color: #0f0f0f;
+            background-color: #000;
             text-align: center;
             padding: 20px;
-            border-top: 2px solid #00f7ff;
+            color: #555;
+            border-top: 1px solid #111;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
         }
     </style>
 </head>
+
 <body>
 
+    <!-- Menu -->
     <header>
-        <h1>ReBoo
+        <div class="container">
+            <div class="logo">ReBoost</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produto">Produto</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Capa -->
+    <section class="hero" id="home">
+        <h1>Recarregue sua energia</h1>
+        <p>Supere seus limites com o melhor Energy Powder do mercado.</p>
+        <button onclick="window.location='#produto'">Saiba Mais</button>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre a ReBoost</h2>
+        <p>A ReBoost nasceu com um objetivo simples e direto: impedir que alunos tomem ocorrência por dormir na aula. Chega de pescoço tombando, caderno virando travesseiro e aquele olhar perdido pro professor. Nossa fórmula foi criada pra te manter acordado, focado e cheio de energia — seja pra encarar uma aula chata, estudar até tarde ou simplesmente não ser pego no flagra pescando. Com ingredientes de alta qualidade, a ReBoost é a sua melhor aliada contra o sono e o tédio. Mais energia, mais foco... e zero ocorrências na ficha.</p>
+    </section>
+
+    <!-- Produto -->
+    <section id="produto">
+        <h2>Nosso Produto</h2>
+        <div class="produto-container">
+            <img src="https://i.imgur.com/2AZ9P5n.png" alt="Produto ReBoost">
+            <p><strong>ReBoost Energy Powder</strong> — Sabor Neutro | 30 doses</p>
+
+            <div class="beneficios">
+                <div class="beneficio">
+                    <h3>⚡ Energia Instantânea</h3>
+                    <p>Acelere seu dia e maximize sua performance.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>🎯 Foco Total</h3>
+                    <p>Alta concentração para quem não pode errar.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>🔥 Zero Açúcar</h3>
+                    <p>Saudável, sem adição de açúcares.</p>
+                </div>
+                <div class="beneficio">
+                    <h3>💪 30 Doses</h3>
+                    <p>Suplemento com ótimo custo-benefício.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Fale Conosco</h2>
+        <div class="contato">
+            <a href="#">WhatsApp</a>
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 ReBoost Energy. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
